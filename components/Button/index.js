@@ -1,10 +1,17 @@
 class Button {
   constructor() {
     this.handleClick = this.handleClick.bind(this);
+    this.variant = "primary";
   }
 
   handleClick() {
-    console.log("clicked");
+    if (this.variant === "primary") {
+      console.log("primary button clicked!");
+      this.variant = "secondary";
+    } else {
+      console.log("button clicked!");
+      this.variant = "primary";
+    }
   }
 
   render() {
@@ -14,3 +21,5 @@ class Button {
     return button;
   }
 }
+
+export default Button;
