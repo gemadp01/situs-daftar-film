@@ -3,7 +3,11 @@ import Button from "../../UI/button/index.js";
 import Typography from "../../UI/typography/index.js";
 
 class Homepage {
-  constructor(props) {}
+  constructor() {
+    this.state = {
+      count: 0,
+    };
+  }
 
   render() {
     const homeContainer = document.createElement("div");
@@ -17,6 +21,12 @@ class Homepage {
     });
 
     homeContainer.appendChild(homeButtonNavigate.render());
+    homeContainer.appendChild(
+      new Typography({
+        variant: "p",
+        children: "Counter: " + this.state.count,
+      }).render()
+    );
     return homeContainer;
   }
 }

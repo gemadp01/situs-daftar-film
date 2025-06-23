@@ -3,7 +3,7 @@ import Button from "../../UI/button/index.js";
 import Typography from "../../UI/typography/index.js";
 
 class Detailpage {
-  constructor(props) {}
+  constructor() {}
 
   render() {
     const detailContainer = document.createElement("div");
